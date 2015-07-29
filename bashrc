@@ -114,15 +114,15 @@ export EDITOR=vim
 #export PATH=$PATH:/home/meteo/play-2.1.1/ 
 # export JAVA_HOME=/usr/lib/jvm/java-6-openjdk-amd64
 #export GRAILS_HOME=/home/meteo/grails-2.2.2/ 
-
-export JAVA_HOME=/home/meteo/java/jdk1.7.0_21/
-# export JAVA_HOME=/home/meteo/java/jdk1.8.0_45/
-export PATH="$PATH:$JAVA_HOME/bin"
-
-# portal
-export GRAILS_HOME=/home/meteo/imos/software/grails-1.3.7/ 
-export PATH="$PATH:$GRAILS_HOME/bin"
-
+# 
+# export JAVA_HOME=/home/meteo/java/jdk1.7.0_21/
+# # export JAVA_HOME=/home/meteo/java/jdk1.8.0_45/
+# export PATH="$PATH:$JAVA_HOME/bin"
+# 
+# # portal
+# export GRAILS_HOME=/home/meteo/imos/software/grails-1.3.7/ 
+# export PATH="$PATH:$GRAILS_HOME/bin"
+# 
 # 
 #export GRAILS_HOME=/home/meteo/imos/software/grails-2.1.0/ 
 #export PATH="$PATH:$GRAILS_HOME/bin"
