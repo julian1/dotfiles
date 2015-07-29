@@ -1,0 +1,6 @@
+
+XTerm*selectToClipboard: true
+XTerm*faceName: DejaVu Sans Mono
+
+! XTerm*faceSize: 10 ! desktop 
+XTerm*faceSize: 15   ! laptop
