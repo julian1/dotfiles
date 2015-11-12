@@ -9,9 +9,11 @@ import System.IO
 
 import XMonad.Util.SpawnOnce
 
+-- intelij
+import XMonad.Hooks.SetWMName
+
 myterminal :: String
--- myterminal = "xterm -fa 'DejaVu Sans Mono' -fs 10" -- desktop
-myterminal = "xterm -fa 'DejaVu Sans Mono' -fs 15"
+myterminal = "xterm -fa 'DejaVu Sans Mono' -fs 10 -fg black -bg white "
 
 myLogHook dest = dynamicLogWithPP defaultPP { ppOutput = hPutStrLn dest
 ,ppVisible = wrap "(" ")"
@@ -28,6 +30,9 @@ xmonad $ defaultConfig
 		, terminal = myterminal 
 
 		-- , startupHook = spawnOnce "/usr/bin/xmobar /home/meteo/.xmobarrc"
+
+        -- intelij
+        , startupHook = setWMName "LG3D"
 
         } 
 		`additionalKeys`
