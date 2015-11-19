@@ -5,10 +5,10 @@ for i in bashrc gitconfig vimrc Xdefaults xmobarrc ; do
 	ln -s $(pwd)/$i ~/.$i
 done
 
-mkdir ~/.xmonad
-ln -s $(pwd)/xmonad.hs  ~/.xmonad/xmonad.hs
+mkdir ~/.xmonad 
+ln -f -s $(pwd)/xmonad.hs  ~/.xmonad/xmonad.hs
 
-ln -s $(pwd)/start.sh ~/start.sh
+ln -f -s $(pwd)/start.sh ~/start.sh
 
 
 
