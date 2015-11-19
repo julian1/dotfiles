@@ -174,4 +174,4 @@ alias g='git'
 
 
 # OPAM configuration
-# . /home/meteo/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
+. /home/meteo/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
