@@ -13,7 +13,10 @@ import XMonad.Util.SpawnOnce
 import XMonad.Hooks.SetWMName
 
 myterminal :: String
-myterminal = "xterm -fa 'DejaVu Sans Mono' -fs 10 -fg black -bg white "
+
+-- inherit font size from Xdefaults
+myterminal = "xterm -fa 'DejaVu Sans Mono'  -fg black -bg white "
+-- myterminal = "xterm -fa 'DejaVu Sans Mono' -fs 10 -fg black -bg white "
 
 myLogHook dest = dynamicLogWithPP defaultPP { ppOutput = hPutStrLn dest
 ,ppVisible = wrap "(" ")"
