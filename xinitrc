@@ -17,8 +17,12 @@ synclient TapButton1=1
 xset b off 
 # xset q | grep bell
 
+xrandr --output eDP1 --brightness 0.7 
 
 xmonad
 
 
+
+
+# xset -dpms; xset s off
 

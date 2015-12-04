@@ -152,7 +152,8 @@ export PATH="$PATH:$MAVEN_HOME/bin"
 # locations
 D=/home/meteo/imos
 
-export HISTTIMEFORMAT="%d/%m/%y %T "
+# export HISTTIMEFORMAT="%d/%m/%y %T "
+export HISTTIMEFORMAT="%T "
 
 ## file locations alias
 alias i="cd $I"
