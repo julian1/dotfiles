@@ -41,7 +41,9 @@ xmonad $ defaultConfig
 
         } 
 		`additionalKeys`
-        [ ((mod1Mask ,  xK_z), spawn "xtrlock -b")
+        [ 
+          ((mod1Mask ,  xK_z), spawn "xtrlock -b"),
+          ((mod1Mask ,  xK_x), spawn "xtrlock -b")
         ]
 
 
