@@ -174,5 +174,5 @@ alias g='git'
 # should be using aliases in .gitconfig
 
 
-[ -f ~/home/meteo/paths ] && . /home/meteo/paths
+[ -f /home/meteo/paths ] && source /home/meteo/paths
 
