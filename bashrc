@@ -176,3 +176,4 @@ alias g='git'
 
 # OPAM configuration
 . /home/meteo/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
+export PATH=$PATH:$HOME/.chefdk/gem/ruby/2.1.0/bin
