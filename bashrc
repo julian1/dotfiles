@@ -174,5 +174,5 @@ alias g='git'
 # should be using aliases in .gitconfig
 
 
-# OPAM configuration
-. /home/meteo/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
+[ -f /home/meteo/paths ] && source /home/meteo/paths
+
