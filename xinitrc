@@ -11,7 +11,7 @@ fi
 
 if true; then
   # this can be confusing because xmonad won't open anything on the window
-  xrandr --auto --output DP1-1 --mode 1920x1200
+  xrandr --auto --output DP1-1 --mode 1920x1200 --primary
   xrandr --auto --output DP1-2 --mode 1280x1024 --right-of DP1-1
   xrandr --output eDP1 --off
 # desktop
