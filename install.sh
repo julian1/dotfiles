@@ -1,6 +1,6 @@
 set -x
 
-for i in bashrc gitconfig vimrc Xdefaults xmobarrc xinitrc Xmodmap; do
+for i in bashrc gitconfig vimrc xinitrc xmobarrc; do
 	mv ~/.$i ~/.$i.old 2> /dev/null
 	ln -s $(pwd)/$i ~/.$i
 done
