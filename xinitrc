@@ -1,5 +1,17 @@
 
-xrdb -merge ~/.Xdefaults
+# xrdb -merge ~/.Xdefaults
+
+xrdb -merge <<- EOF
+  XTerm*selectToClipboard: true
+  XTerm*faceName: DejaVu Sans Mono
+
+  ! XTerm*faceSize: 10 ! desktop 
+  XTerm*faceSize: 15   ! laptop
+
+  XTerm*Background: white
+  XTerm*Foreground: black
+EOF
+
 
 # custom keys
 if [ -s ~/.Xmodmap ]; then
