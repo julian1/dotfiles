@@ -114,14 +114,11 @@ fi
 
 export EDITOR=vim
 
-export MAVEN_HOME=/home/meteo/imos/software/apache-maven-3.2.2/
-export PATH="$PATH:$MAVEN_HOME/bin"
-
 # cd into a temp directory
 alias t='pushd $( mktemp -d )'
 
 # git
 alias g='git'
 
-[ -f $USER/paths ] && source $USER/paths
+[ -f $HOME/paths ] && source $HOME/paths
 
