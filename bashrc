@@ -109,61 +109,13 @@ if ! shopt -oq posix; then
   fi
 fi
 
+
+#################################
+
 export EDITOR=vim
-
-#export PATH=$PATH:/home/meteo/play-2.1.1/ 
-# export JAVA_HOME=/usr/lib/jvm/java-6-openjdk-amd64
-#export GRAILS_HOME=/home/meteo/grails-2.2.2/ 
-# 
-# export JAVA_HOME=/home/meteo/java/jdk1.7.0_21/
-# # export JAVA_HOME=/home/meteo/java/jdk1.8.0_45/
-# export PATH="$PATH:$JAVA_HOME/bin"
-# 
-# # portal
-# export GRAILS_HOME=/home/meteo/imos/software/grails-1.3.7/ 
-# export PATH="$PATH:$GRAILS_HOME/bin"
-# 
-# 
-#export GRAILS_HOME=/home/meteo/imos/software/grails-2.1.0/ 
-#export PATH="$PATH:$GRAILS_HOME/bin"
-# 
-
-# <<<<<<< HEAD
-# =======
-# export GRAILS_HOME=/home/meteo/java/grails-2.4.4/
-# export PATH="$PATH:$GRAILS_HOME/bin"
-# >>>>>>> 9472508641a01b1d7b065fa5e1ca008795bd10cf
-
-# 
-# # vocab
-# export GRAILS_HOME=/home/meteo/imos/software/grails-2.4.4/
-# export PATH="$PATH:$GRAILS_HOME/bin"
-# 
-
-
-#export GROOVY_HOME=/home/meteo/imos/software/groovy-2.1.3/ 
-#export PATH="$PATH:$GROOVY_HOME/bin"
 
 export MAVEN_HOME=/home/meteo/imos/software/apache-maven-3.2.2/
 export PATH="$PATH:$MAVEN_HOME/bin"
-
-
-
-# locations
-D=/home/meteo/imos
-
-# export HISTTIMEFORMAT="%d/%m/%y %T "
-export HISTTIMEFORMAT="%T "
-
-## file locations alias
-alias i="cd $I"
-
-## vagrant shortcuts
-
-## ssh alias
-
-# alias 134='ssh -A 144.6.224.134'
-#alias 2t='ssh -A jfca@144.6.224.135'
 
 # cd into a temp directory
 alias t='pushd $( mktemp -d )'
@@ -171,8 +123,5 @@ alias t='pushd $( mktemp -d )'
 # git
 alias g='git'
 
-# should be using aliases in .gitconfig
-
-
-[ -f /home/meteo/paths ] && source /home/meteo/paths
+[ -f $USER/paths ] && source $USER/paths
 
