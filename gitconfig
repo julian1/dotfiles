@@ -1,42 +1,52 @@
 [user]
-	name = julian1
-	email = julian.atkinson71@gmail.com
+  name = julian1
+  email = julian.atkinson71@gmail.com
 [push]
-	default = simple
+  default = simple
 
 # see http://durdn.com/blog/2012/11/22/must-have-git-aliases-advanced-examples/
 [alias]
-	# misc/common
-	c = commit
-	cm = commit -m
-	a = add
-	s = status -s
-	p = pull -p
-	pom = push origin master
-	po = push origin
-	# branch stuff 
-	b = branch
-	bd = branch -D
-	# checkout stuff
-	co = checkout
-	cob = checkout -b
-	com = checkout master
-	# log stuff
-	ls = log --color --graph  --abbrev-commit --decorate --abbrev-commit --decorate --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue) <%an>%Creset'
-	ll = log --color --graph  --abbrev-commit --decorate --abbrev-commit --decorate --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue) <%an>%Creset' --numstat
-	lf = log -U1 --follow	
-	lp = log --color --graph  --abbrev-commit --decorate --abbrev-commit --decorate --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue) <%an>%Creset' -p
-	# reset stuff
-	r = reset
-	rh = reset --hard
-	# reset to remote head
-	rhh = reset --hard remotes/origin/HEAD
-	# reset to last - or undo last commit
-	# rl = reset --hard HEAD~1
-	rl = checkout HEAD~1
+  # misc/common
+  c = commit
+  cm = commit -m
+  a = add
+  s = status -s
 
-	# unstage file - deleted only
-	#rc = rm --cached
-	# reset will unstage ordinary staged files
+  pom = push origin master
+  po = push origin
 
-	dc = diff --color
+  # branch stuff
+  b = branch
+  bd = branch -D
+
+  # checkout stuff
+  co = checkout
+  cob = checkout -b
+  com = checkout master
+
+  # log stuff
+  ls = log --color --graph  --abbrev-commit --decorate --abbrev-commit --decorate --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue) <%an>%Creset'
+  ll = log --color --graph  --abbrev-commit --decorate --abbrev-commit --decorate --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue) <%an>%Creset' --numstat
+  lf = log -U1 --follow
+  lp = log --color --graph  --abbrev-commit --decorate --abbrev-commit --decorate --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue) <%an>%Creset' -p
+
+  # reset stuff
+  r = reset
+  rh = reset --hard
+  # reset to remote head
+  rhh = reset --hard remotes/origin/HEAD
+  # reset to last - or undo last commit
+  # rl = reset --hard HEAD~1
+  rl = checkout HEAD~1
+  # unstage file - deleted only
+  #rc = rm --cached
+  # reset will unstage ordinary staged files
+
+  dc = diff --color
+
+  f = fetch
+
+  pu = pull -p
+  puom = pull origin master
+  puo = pull origin
+
