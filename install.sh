@@ -9,6 +9,3 @@ test -d ~/.xmonad || mkdir ~/.xmonad
 
 ln -f -s $(pwd)/xmonad.hs  ~/.xmonad/xmonad.hs
 
-# ln -f -s $(pwd)/start.sh ~/start.sh
-
-
