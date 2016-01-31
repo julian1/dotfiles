@@ -2,6 +2,8 @@
 # http://unix.stackexchange.com/questions/30925/in-bash-when-to-alias-when-to-script-and-when-to-write-a-function
 . $HOME/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
 
+export HISTFILESIZE=40000
+export HISTSIZE=40001
 export HISTTIMEFORMAT="%T " # "
 export EDITOR=vim
 
@@ -24,7 +26,8 @@ alias top='top -d .7'
 # alias hs="history" # conflict with h=home
 alias myip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias pong="ping 8.8.8.8 -c 4"
-alias pw='head -c 18 /dev/urandom | base64'
+alias pw2='head -c 18 /dev/urandom | base64'
+alias pw="head -c 18 /dev/urandom | base64 | sed 's/[\/\+=]//g'"
 alias pr='a2ps -1 -R -f 9'
 alias t='export T=$(mktemp -d); pushd $T'
 alias as='aptitude search'    # conflicts with gnu as
