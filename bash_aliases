@@ -56,13 +56,16 @@ function la() {
     }'
 }
 
+# TODO  test which /bin/systemctl
 # systemd specific
+if [ -f /bin/systemctl ]; then
 function start()    { sudo systemctl start $@;   }
 function stop()     { sudo systemctl stop $@;    }
 function restart()  { sudo systemctl restart $@; }
 function status()   { sudo systemctl status $@;  }
 function enable()   { sudo systemctl enable $@;  }
 function disable()  { sudo systemctl disable $@; }
+fi
 
 export PATH="$PATH:$HOME/dotfiles/scripts"
 
