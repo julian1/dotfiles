@@ -1,6 +1,6 @@
 #!/bin/bash -x
 
-for i in bashrc gitconfig vimrc xmobarrc; do
+for i in bash_aliases gitconfig vimrc xmobarrc; do
 	mv ~/.$i ~/.$i.old 2> /dev/null
 	ln -s $(pwd)/$i ~/.$i
 done
