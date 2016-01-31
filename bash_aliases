@@ -64,3 +64,6 @@ function restart()  { sudo systemctl restart $@; }
 function status()   { sudo systemctl status $@;  }
 function enable()   { sudo systemctl enable $@;  }
 function disable()  { sudo systemctl disable $@; }
+
+export PATH="$PATH:$HOME/dotfiles/scripts"
+
