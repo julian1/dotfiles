@@ -26,8 +26,7 @@ alias top='top -d .7'
 # alias hs="history" # conflict with h=home
 alias myip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias pong="ping 8.8.8.8 -c 4"
-alias pw2='head -c 18 /dev/urandom | base64'
-alias pw="head -c 18 /dev/urandom | base64 | sed 's/[\/\+=]//g'"
+alias pw="cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 18 | head -n 1"
 alias pr='a2ps -1 -R -f 9'
 alias t='export T=$(mktemp -d); pushd $T'
 alias as='aptitude search'    # conflicts with gnu as
