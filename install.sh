@@ -2,7 +2,9 @@
 
 for i in bash_aliases gitconfig vimrc xmobarrc; do
 	mv ~/.$i ~/.$i.old 2> /dev/null
-	ln -s $(pwd)/$i ~/.$i
+  # copy instead of linking to permit local modification
+	# ln -s $(pwd)/$i ~/.$i
+	cp $(pwd)/$i ~/.$i
 done
 
 test -d ~/.xmonad || mkdir ~/.xmonad
