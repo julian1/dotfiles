@@ -70,7 +70,7 @@ fi
 export PATH="$PATH:$HOME/dotfiles/scripts"
 
 
-RED="\[\035[1;31m\]"
+RED="\[\033[1;31m\]"
 YELLOW="\[\033[1;33m\]"
 GREEN="\[\033[1;32m\]"
 BLUE="\[\033[1;34m\]"
