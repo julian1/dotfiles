@@ -69,3 +69,21 @@ fi
 
 export PATH="$PATH:$HOME/dotfiles/scripts"
 
+
+RED="\[\035[1;31m\]"
+YELLOW="\[\033[1;33m\]"
+GREEN="\[\033[1;32m\]"
+BLUE="\[\033[1;34m\]"
+NO_COLOUR="\[\033[0m\]"
+
+get_prompt_color() {
+    if [ `id -u` -eq 0 ]; then
+        echo "$RED"
+    else
+        echo "$GREEN"
+    fi
+}
+
+PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}$(get_prompt_color)\u@\h${NO_COLOUR}:${BLUE}\w${NO_COLOUR}\$ "
+
+
