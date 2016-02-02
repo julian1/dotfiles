@@ -41,7 +41,10 @@ alias g=git
 alias v='vim -p'
 alias s=sudo
 alias sv="sudo vim -p"
-alias ss="sudo -s"
+# TODO conflicts with sockets util
+# also may way -E option
+# alias ss="sudo -s"
+alias ss="sudo -sE"
 
 alias ls='ls --group-directories-first --color=always'
 
