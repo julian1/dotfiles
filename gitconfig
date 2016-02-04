@@ -38,11 +38,13 @@
   com = checkout master
 
   # log stuff
-  ls = log --color --graph  --abbrev-commit --decorate --abbrev-commit --decorate --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue) <%an>%Creset'
+  l = log --color --graph  --abbrev-commit --decorate --abbrev-commit --decorate --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue) <%an>%Creset'
   ll = log --color --graph  --abbrev-commit --decorate --abbrev-commit --decorate --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue) <%an>%Creset' --numstat
   lf = log -U1 --follow
-  # log with changes
-  lp = log --color  -p
+  # show source changes
+  lp = log --color -p
+  # show file change stats
+  ls = log --color --stat
 
   # reset stuff
   r = reset
