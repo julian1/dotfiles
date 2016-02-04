@@ -11,10 +11,12 @@ export EDITOR=vim
 export H=$HOME
 export A=$HOME/ansible-tests
 export C=$HOME/Config_Stuff2
+export D=$HOME/dotfiles
 #export L=/var/log
 
 alias a="cd $A"
 alias c="cd $C"
+alias d="cd $D"
 alias e='cd /etc'
 alias h="cd $HOME"
 
