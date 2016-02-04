@@ -11,6 +11,7 @@
   c = commit
   cm = commit -m
   a = add
+  au = add -u
   s = status -s
 
   f = fetch
@@ -37,7 +38,7 @@
   cob = checkout -b
   com = checkout master
 
-  # log stuff
+  # log history
   l = log --color --graph  --abbrev-commit --decorate --abbrev-commit --decorate --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue) <%an>%Creset'
   ll = log --color --graph  --abbrev-commit --decorate --abbrev-commit --decorate --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue) <%an>%Creset' --numstat
   lf = log -U1 --follow
