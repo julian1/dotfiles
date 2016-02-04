@@ -6,14 +6,27 @@
 
 # see http://durdn.com/blog/2012/11/22/must-have-git-aliases-advanced-examples/
 [alias]
-  # misc/common
+
+  # commit/staging
   c = commit
   cm = commit -m
   a = add
   s = status -s
 
-  pom = push origin master
+  f = fetch
+
+  # git commit --amend -m doesn't work for some reason?
+  am = commit --amend -m
+
+  # push
+  p = push
   po = push origin
+  pom = push origin master
+
+  # pull
+  pu = pull -p
+  puo = pull origin
+  puom = pull origin master
 
   # branch stuff
   b = branch
@@ -28,25 +41,21 @@
   ls = log --color --graph  --abbrev-commit --decorate --abbrev-commit --decorate --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue) <%an>%Creset'
   ll = log --color --graph  --abbrev-commit --decorate --abbrev-commit --decorate --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue) <%an>%Creset' --numstat
   lf = log -U1 --follow
-  lp = log --color --graph  --abbrev-commit --decorate --abbrev-commit --decorate --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue) <%an>%Creset' -p
+  # log with changes
+  lp = log --color  -p
 
   # reset stuff
   r = reset
   rh = reset --hard
-  # reset to remote head
   rhh = reset --hard remotes/origin/HEAD
-  # reset to last - or undo last commit
-  # rl = reset --hard HEAD~1
-  rl = checkout HEAD~1
   # unstage file - deleted only
   #rc = rm --cached
   # reset will unstage ordinary staged files
 
+  # reset to last commit - or undo last commit
+  u = checkout HEAD~1
+  # rl = reset --hard HEAD~1
+
   dc = diff --color
 
-  f = fetch
-
-  pu = pull -p
-  puom = pull origin master
-  puo = pull origin
 
