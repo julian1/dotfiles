@@ -24,34 +24,40 @@ alias dmesg='dmesg -T --color=always'
 alias less='less -R'
 alias vim='vim -p'
 alias top='top -d .7'
+alias tmp='export T=$(mktemp -d); pushd $T'
 
 # alias hs="history" # conflict with h=home
 alias myip='dig +short myip.opendns.com @resolver1.opendns.com'
-alias pong="ping 8.8.8.8 -c 4"
+
+alias pt="ping 8.8.8.8 -c 4"
 alias pw="cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 18 | head -n 1"
 alias pr='a2ps -1 -R -f 9'
-alias t='export T=$(mktemp -d); pushd $T'
-alias as='aptitude search'    # conflicts with gnu as
-alias au='apt-get update'
-alias rec="ffmpeg -f x11grab -s 1920x1200 -r 25 -i :0.0 output.mp4"
-alias rec2="ffmpeg -f x11grab -s 1920x1080 -r 25 -i :0.0 output.mp4"
 
+alias rec="ffmpeg  -f x11grab -s 1920x1200 -r 25 -i :0.0 output.mp4"
+alias rec2="ffmpeg -f x11grab -s 1920x1080 -r 25 -i :0.0 output.mp4"
 alias frdate='TZ=Europe/Paris date'
 
-alias p=ping
+# Single key aliases are idempotent, no rm,cp,mv etc
+alias a=apt-get
+alias c=cat            # cd or cat?
+alias f=find
 alias g=git
+alias h=history
+alias l=less 
+alias ls='ls --group-directories-first --color=always' # or less, or locate?
+alias p=ping
 # alias ps='ps auxf'
-alias v='vim -p'
 alias s=sudo
-alias sv="sudo vim -p"
-# TODO conflicts with sockets util
-# also may way -E option
-# alias ss="sudo -s"
-alias ss="sudo -sE"
+alias t='top -d .7'
+alias sc=screen
+alias sv='sudo vim -p'
+# TODO issue ss conflicts with sockets util, also 
+alias ss='sudo -s'
+alias se='sudo -sE'
+alias v='vim -p'
 
-alias ls='ls --group-directories-first --color=always'
 
-function la() {
+function ll() {
   ls -lh --group-directories-first --color=always $@ | awk '{
     k=0;
     for(i=0;i<=8;i++)
