@@ -12,6 +12,7 @@
   cm = commit -m
   a = add
   au = add -u
+
   s = status -s
 
   f = fetch
@@ -47,17 +48,19 @@
   # show file change stats
   ls = log --color --stat
 
-  # reset stuff
-  r = reset
-  rh = reset --hard
-  rhh = reset --hard remotes/origin/HEAD
-  # unstage file - deleted only
-  #rc = rm --cached
-  # reset will unstage ordinary staged files
+  # r for rebase, nicer than reset
+  r = rebase
 
-  # reset to last commit - or undo last commit
+  # reset stuff
+  rh = reset --hard
+  ro = reset --hard remotes/origin/HEAD
+
+  # unstage file - deleted only
+  # reset can be used unstage ordinary staged files
+  ru = rm --cached
+
+  # undo last commit (or reset to last commit)
   u = checkout HEAD~1
-  # rl = reset --hard HEAD~1
 
   dc = diff --color
 
