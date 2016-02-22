@@ -33,7 +33,8 @@ alias pr='a2ps -1 -R -f 9'
 alias t='export T=$(mktemp -d); pushd $T'
 alias as='aptitude search'    # conflicts with gnu as
 alias au='apt-get update'
-alias rec="ffmpeg -f x11grab -s 1920x1080 -r 25 -i :0.0 output.mkv"
+alias rec="ffmpeg -f x11grab -s 1920x1200 -r 25 -i :0.0 output.mp4"
+alias rec2="ffmpeg -f x11grab -s 1920x1080 -r 25 -i :0.0 output.mp4"
 
 alias frdate='TZ=Europe/Paris date'
 
