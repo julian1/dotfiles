@@ -38,8 +38,8 @@ alias rec2="ffmpeg -f x11grab -s 1920x1080 -r 25 -i :0.0 output.mp4"
 alias frdate='TZ=Europe/Paris date'
 
 # Single key aliases are idempotent, no rm,cp,mv etc
-alias a=apt-get
-alias c=cat            # cd or cat?
+# alias a=apt-get         # ansible 
+# alias c=cat             # cd or cat? config_stufff
 alias f=find
 alias g=git
 alias h=history
