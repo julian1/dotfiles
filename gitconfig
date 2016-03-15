@@ -10,6 +10,8 @@
   # commit/staging
   c = commit
   cm = commit -m
+  cma = commit --amend -m
+
   a = add
   au = add -u
 
