@@ -1,0 +1,3 @@
+# Don't display the copyright page
+startup_message off           # default: on
+

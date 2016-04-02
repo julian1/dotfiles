@@ -1,8 +1,8 @@
 #!/bin/bash -x
 
-for i in bash_aliases gitconfig vimrc xmobarrc; do
+for i in bash_aliases gitconfig vimrc xmobarrc screenrc; do
 	mv ~/.$i ~/.$i.old 2> /dev/null
-  # copy instead of linking to permit local modification
+  # use copy instead of linking to permit local modification
 	# ln -s $(pwd)/$i ~/.$i
 	cp $(pwd)/$i ~/.$i
 done
