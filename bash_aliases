@@ -56,6 +56,9 @@ alias ss='sudo -s'
 alias se='sudo -sE'
 alias v='vim -p'
 
+function logs() { 
+zcat -f $(ls -rv "$1"*) | less; 
+}
 
 function ll() {
   ls -lh --group-directories-first --color=always $@ | awk '{
