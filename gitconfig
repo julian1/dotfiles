@@ -19,6 +19,8 @@
 
   f = fetch
 
+  m = merge
+
   # git commit --amend -m doesn't work for some reason?
   am = commit --amend -m
 
@@ -28,9 +30,9 @@
   pom = push origin master
 
   # pull
-  pu = pull -p
-  puo = pull origin
-  puom = pull origin master
+  # pu = pull -p
+  # puo = pull origin
+  # puom = pull origin master
 
   # branch stuff
   b = branch
