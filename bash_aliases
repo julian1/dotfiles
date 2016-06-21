@@ -18,13 +18,15 @@ alias a="cd $A"
 alias c="cd $C"
 alias d="cd $D"
 alias e='cd /etc'
+
 alias h="cd $HOME"
 
 alias dmesg='dmesg -T --color=always'
 alias less='less -R'
 alias vim='vim -p'
 alias top='top -d .7'
-alias tmp='export T=$(mktemp -d); pushd $T'
+# just use  cd $(mktemp -d )
+# alias tmp='export T=$(mktemp -d); pushd $T'
 
 # alias hs="history" # conflict with h=home
 alias myip='dig +short myip.opendns.com @resolver1.opendns.com'
@@ -42,12 +44,12 @@ alias cap="scrot -d 5"
 alias frdate='TZ=Europe/Paris date'
 
 # Single key aliases are idempotent, no rm,cp,mv etc
-# alias a=apt-get         # ansible 
+# alias a=apt-get         # ansible
 # alias c=cat             # cd or cat? config_stufff
 alias f=find
 alias g=git
 alias h=history
-alias l=less 
+alias l=less
 alias ls='ls --group-directories-first --color=always' # or less, or locate?
 alias p=ping
 # alias ps='ps auxf'
@@ -55,13 +57,32 @@ alias s=sudo
 alias t='top -d .7'
 alias sc=screen
 alias sv='sudo vim -p'
-# TODO issue ss conflicts with sockets util, also 
+# TODO issue ss conflicts with sockets util, also
 alias ss='sudo -s'
 alias se='sudo -sE'
 alias v='vim -p'
 
-function logs() { 
-zcat -f $(ls -rv "$1"*) | less; 
+# mkdir and cd into it
+mkdir_cd() {
+    mkdir $1
+    cd $1
+}
+alias m=mkdir_cd
+
+# chup directory
+up() {
+    if [ -z "$1" ]; then
+      cd ..
+    else
+      for i in $(seq 1 "$1"); do cd ..; done
+    fi
+}
+alias u=up
+
+
+# TODO maybe remove since it's a bit specific
+function logs() {
+  zcat -f $(ls -rv "$1"*) | less;
 }
 
 function ll() {
