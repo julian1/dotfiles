@@ -16,10 +16,9 @@
   au = add -u
 
   s = status -s
-
-  f = fetch
-
+  f = fetch --all
   m = merge
+  mom = merge origin/master
 
   # git commit --amend -m doesn't work for some reason?
   am = commit --amend -m
@@ -27,16 +26,23 @@
   # push
   p = push
   po = push origin
-  pom = push origin master
+  # pom = push origin master
 
+  # be explicit
+  # use fetch and merge instead of pull
   # pull
-  # pu = pull -p
+  # pu = pull
   # puo = pull origin
   # puom = pull origin master
 
   # branch stuff
   b = branch
   bd = branch -D
+
+  # r can be remote, rebase, reset or rm, seem to use remote the most
+  # remote
+  r = remote
+  rv = remote -v
 
   # checkout stuff
   co = checkout
@@ -52,9 +58,6 @@
   # show file change stats
   ls = log --color --stat
 
-  # r for rebase, nicer than reset
-  r = rebase
-
   # reset stuff
   rh = reset --hard
   ro = reset --hard remotes/origin/HEAD
@@ -66,6 +69,7 @@
   # undo last commit (or reset to last commit)
   u = checkout HEAD~1
 
+  # diff
   dc = diff --color
 
 

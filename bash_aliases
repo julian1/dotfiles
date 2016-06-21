@@ -35,6 +35,10 @@ alias pr='a2ps -1 -R -f 9'
 
 alias rec="ffmpeg  -f x11grab -s 1920x1200 -r 25 -i :0.0 output.mp4"
 alias rec2="ffmpeg -f x11grab -s 1920x1080 -r 25 -i :0.0 output.mp4"
+
+# screen capture, emits a png in folder
+alias cap="scrot -d 5"
+
 alias frdate='TZ=Europe/Paris date'
 
 # Single key aliases are idempotent, no rm,cp,mv etc
