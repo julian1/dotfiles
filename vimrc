@@ -137,4 +137,6 @@ noremap <silent> ,cu :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<
 
 au BufNewFile,BufRead *.sol setf solidity
 
+au BufNewFile,BufRead *.why3 setf why3 
+au BufNewFile,BufRead *.why setf why3 
 
