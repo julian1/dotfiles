@@ -18,6 +18,9 @@
   s = status -s
   f = fetch --all
   m = merge
+
+  cp = cherry-pick
+
   mom = merge origin/master
 
   # git commit --amend -m doesn't work for some reason?
