@@ -1,4 +1,4 @@
 
 # xset -dpms; xset s off
 
-xrandr --output eDP1 --brightness $1
+xrandr --output eDP-1 --brightness $1
