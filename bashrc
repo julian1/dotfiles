@@ -38,15 +38,25 @@ alias l=ls
 #unalias f
 
 function f() {
+  # eg. support,
+  # f
+  # f "pat"
+  # f ./ "pat" -type f
+  # f ./ "pat" -ls
+  # pat, is case insensitive by default
 
-  if [ "$#" == 1 ]; then
-    dir="./";
-  else
-    dir="$1";
-    shift;
+  if [ "$#" == 0 ]; then
+    find
+  else 
+    if [ "$#" == 1 ]; then
+      dir="./"
+    else
+      dir="$1"; shift;
+    fi
+
+    arg=$1; shift;
+    find "$dir" -iname "*$arg*" "$@";
   fi
-
-  find "$dir" -iname "*$1*";
 }
 
 
