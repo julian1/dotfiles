@@ -52,7 +52,7 @@ set report=0
 
 
 " put text select into the command line
-" https://stackoverflow.com/questions/4878980/vim-insert-selected-text-into-command-line 
+" https://stackoverflow.com/questions/4878980/vim-insert-selected-text-into-command-line
 vnoremap : y:<C-r>"<C-b>
 
 
@@ -198,10 +198,15 @@ set undodir=~/.vim/undo//
 
 " https://vi.stackexchange.com/questions/21708/how-do-i-disable-vim-from-producing-backup-files
 " create dirs if necessary
-" TODO should do autoload and bundle also
-if !isdirectory(&undodir) | call mkdir(&undodir, "p") | endif
+if !isdirectory(&undodir)   | call mkdir(&undodir, "p") | endif
 if !isdirectory(&backupdir) | call mkdir(&backupdir, "p") | endif
 if !isdirectory(&directory) | call mkdir(&directory, "p") | endif
+
+
+" autoload and bundle also
+if !isdirectory('~/.vim/autoload//')  | call mkdir('~/.vim/autoload//', "p") | endif
+if !isdirectory('~/.vim/bundle//')    | call mkdir('~/.vim/bundle//', "p") | endif
+
 
 
 " idris specific?
