@@ -49,7 +49,7 @@ set report=0
 
 
 
-" put text select into the command line
+" put any selected text into the command line on ':'
 " https://stackoverflow.com/questions/4878980/vim-insert-selected-text-into-command-line
 vnoremap : y:<C-r>"<C-b>
 

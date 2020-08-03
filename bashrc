@@ -38,11 +38,16 @@ alias l=ls
 #unalias f
 
 function f() {
+  # subsume -iname '*$1*' argument
   # eg. support,
   # f
   # f "pat"
   # f ./ "pat" -type f
   # f ./ "pat" -ls
+  # f ./ "pat" -type f | xargs ls
+  # f ~/ '' -type d  | wc -l
+  # f / '*' -type f | while read i; do echo $i; done
+  # etc
   # pat, is case insensitive by default
 
   if [ "$#" == 0 ]; then

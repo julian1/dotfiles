@@ -10,7 +10,7 @@ for i in "bashrc" "vimrc" "screenrc"  "gitconfig" ; do
   cp "$(pwd)/$i" "$HOME/.$i"
 done
 
-
+# vim now hanles local dir creation,
 #for i in ".vim" ".vim/backup" ".vim/swap"  ".vim/undo" ".vim/autoload" ".vim/bundle"; do 
 #  echo $i; 
 #  [ -d "$HOME/$i" ] ||  mkdir "$HOME/$i"
