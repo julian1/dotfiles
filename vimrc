@@ -51,7 +51,8 @@ set report=0
 
 " put any selected text into the command line on ':'
 " https://stackoverflow.com/questions/4878980/vim-insert-selected-text-into-command-line
-vnoremap : y:<C-r>"<C-b>
+" prevents easy sedding on, git rebase -i
+"vnoremap : y:<C-r>"<C-b>
 
 
 " shortcut to fix all trailing space
