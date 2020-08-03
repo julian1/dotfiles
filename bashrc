@@ -34,7 +34,20 @@ alias s=sudo
 alias l=ls
 
 # alias c=clear   use ctrl-L instead
-alias f='find . -iname'
+#alias f='find . -iname'
+#unalias f
+
+function f() {
+
+  if [ "$#" == 1 ]; then
+    dir="./";
+  else
+    dir="$1";
+    shift;
+  fi
+
+  find "$dir" -iname "*$1*";
+}
 
 
 # OLD
