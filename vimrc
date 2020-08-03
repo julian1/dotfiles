@@ -137,11 +137,11 @@ nmap <C-Y> mz:execute SaveSession()<CR>
 
 " ********** FOLDING **************
 
-set foldmethod=syntax
+" set foldmethod=syntax
 
 " set to unfold 5 levels, so a newly opened file is mostly unfolded
 " see, http://vim.wikia.com/wiki/All_folds_open_when_opening_a_file
-set foldlevelstart=5
+" set foldlevelstart=5
 
 " ************** TAB/SPACE HANDLING ****************
 
