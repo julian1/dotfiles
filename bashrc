@@ -10,6 +10,12 @@ export HISTTIMEFORMAT="%T " # "
 export EDITOR=vim
 export PATH="$HOME/.local/bin:$PATH"
 
+
+
+#########################
+# alias/functions
+
+
 # ps except deselect kernel kthreadd
 # use ps2 f for tree listing without kernel processes
 # hmmm, 'ps xf' appears to do similar and better...
@@ -29,9 +35,9 @@ alias feh='feh -F -d --draw-exif'
 alias iftop='iftop -B -P -N'
 
 # shortcuts
+alias l=ls
 alias g=git
 alias s=sudo
-alias l=ls
 
 # alias c=clear   use ctrl-L instead
 #alias f='find . -iname'
@@ -94,32 +100,6 @@ alias path='for i in $( echo "$PATH" | sed "s/\:/ /g" ); do echo $i; done'
 # just use  cd $(mktemp -d ) if really needed
 # alias tmp='export T=$(mktemp -d); pushd $T'
 
-# figure out ip doing nat
-alias myip='dig +short myip.opendns.com @resolver1.opendns.com'
-alias myip2='curl https://api.ipify.org/?format=json'
-alias myip3='curl https://ident.me'
-alias myip4="curl -s http://www.ip-adress.eu/ | grep My | sed 's/.*\">//' "
-
-# ping
-
-# ping gateway
-function pgw() {
-  gateway=$( ip route | grep '^default' | cut -d ' ' -f 3  )
-  ping -i 0.7 $gateway
-}
-# ping dns server
-function pdns() {
-  dns=$( grep '^nameserver' /etc/resolv.conf | head -n 1 | cut -d ' ' -f 2 )
-  ping -i 0.7  $dns
-}
-
-# ping google
-alias p8="ping -i 0.7 8.8.8.8"
-# ping opendns
-alias p9="ping -i 0.7 208.67.222.222"
-
-# watch ping google
-alias wp8='watch -n 0.7 ping -i 0.7 -c 1 8.8.8.8'
 
 # generate a password
 alias mkpass="cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 18 | head -n 1"
@@ -204,6 +184,41 @@ up() {
 function logs() {
   zcat -f $(ls -rv "$1"*) | less;
 }
+
+
+#########################
+# network
+
+# figure out ip doing nat
+alias myip='dig +short myip.opendns.com @resolver1.opendns.com'
+alias myip2='curl https://api.ipify.org/?format=json'
+alias myip3='curl https://ident.me'
+alias myip4="curl -s http://www.ip-adress.eu/ | grep My | sed 's/.*\">//' "
+
+# ping
+
+# ping gateway
+function pgw() {
+  gateway=$( ip route | grep '^default' | cut -d ' ' -f 3  )
+  ping -i 0.7 $gateway
+}
+# ping dns server
+function pdns() {
+  dns=$( grep '^nameserver' /etc/resolv.conf | head -n 1 | cut -d ' ' -f 2 )
+  ping -i 0.7  $dns
+}
+
+# ping google
+alias p8="ping -i 0.7 8.8.8.8"
+# ping opendns
+alias p9="ping -i 0.7 208.67.222.222"
+
+# watch ping google
+alias wp8='watch -n 0.7 ping -i 0.7 -c 1 8.8.8.8'
+
+
+#########################
+
 
 
 # shell colors...
