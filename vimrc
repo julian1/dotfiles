@@ -23,8 +23,6 @@ set number
 " don't blink
 set novisualbell
 
-" ruler at lower rhs, reporting position in file
-set ruler
 
 " don't do auto commenting , better copy pasting
 set paste
@@ -229,6 +227,10 @@ color koehler
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 "cmap wx w !sudo tee > /dev/null %
 cmap wx w !sudo tee  %
+
+" do this last, something is turning ruler off...
+" ruler at lower rhs, reporting position in file
+set ruler
 
 
 " *************** PATHOGEN *******
