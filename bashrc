@@ -13,6 +13,8 @@ export EDITOR=vim
 export PATH="$HOME/.local/bin:$PATH"
 
 
+# for nix/nixos, reasonable default
+#export DISPLAY=:0
 
 #########################
 # alias/functions
@@ -229,11 +231,11 @@ BLUE="\[\033[1;34m\]"
 NO_COLOUR="\[\033[0m\]"
 
 get_prompt_color() {
-    if [ `id -u` -eq 0 ]; then
-        echo "$RED"
-    else
-        echo "$GREEN"
-    fi
+  if [ `id -u` -eq 0 ]; then
+    echo "$RED"
+  else
+    echo "$GREEN"
+  fi
 }
 
 PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}$(get_prompt_color)\u@\h${NO_COLOUR}:${BLUE}\w${NO_COLOUR}\$ "
