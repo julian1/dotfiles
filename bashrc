@@ -8,6 +8,8 @@ export HISTFILESIZE=40000
 export HISTSIZE=40001
 export HISTTIMEFORMAT="%T " # "
 export EDITOR=vim
+
+# add local bin
 export PATH="$HOME/.local/bin:$PATH"
 
 
@@ -15,6 +17,8 @@ export PATH="$HOME/.local/bin:$PATH"
 #########################
 # alias/functions
 
+
+alias ls='ls --group-directories-first --color=always' # or less, or locate?
 
 # ps except deselect kernel kthreadd
 # use ps2 f for tree listing without kernel processes
@@ -43,33 +47,6 @@ alias s=sudo
 #alias f='find . -iname'
 #unalias f
 
-function f() {
-  # subsume -iname '*$1*' argument
-  # eg. support,
-  # f
-  # f "pat"
-  # f ./ "pat" -type f
-  # f ./ "pat" -ls
-  # f ./ "pat" -type f | xargs ls
-  # f ~/ '' -type d  | wc -l
-  # f / '*' -type f | while read i; do echo $i; done
-  # etc
-  # pat, is case insensitive by default
-
-  if [ "$#" == 0 ]; then
-    find
-  else 
-    if [ "$#" == 1 ]; then
-      dir="./"
-    else
-      dir="$1"; shift;
-    fi
-
-    arg=$1; shift;
-    find "$dir" -iname "*$arg*" "$@";
-  fi
-}
-
 
 # OLD
 # Single key aliases are idempotent, no rm,cp,mv etc
@@ -87,7 +64,6 @@ function f() {
 # alias se='sudo -sE'
 # alias sc='systemctl'
 
-# sc conflicts with systemctl and /usr/bin/sc
 alias sc=systemctl    # shadows /usr/bin/sc
 alias jc=journalctl
 alias mc=machinectl
@@ -126,7 +102,34 @@ alias hcmtime='TZ=Asia/Ho_Chi_Minh date'
 alias utctime='date --utc'
 
 
-alias ls='ls --group-directories-first --color=always' # or less, or locate?
+function f() {
+  # subsume -iname '*$1*' argument
+  # ie. support,
+  # f
+  # f "pat"
+  # f ./ "pat" -type f
+  # f ./ "pat" -ls
+  # f ./ "pat" -type f | xargs ls
+  # f ~/ '' -type d  | wc -l
+  # f / '*' -type f | while read i; do echo $i; done
+  # etc
+  # pat is case insensitive by default
+
+  if [ "$#" == 0 ]; then
+    find
+  else
+    if [ "$#" == 1 ]; then
+      dir="./"
+    else
+      dir="$1"; shift;
+    fi
+
+    arg=$1; shift;
+    find "$dir" -iname "*$arg*" "$@";
+  fi
+}
+
+
 
 # add numeric permissions. (eg 755) to ls
 function ls2() {
@@ -149,7 +152,6 @@ cols() {
 
 # https://serverfault.com/questions/116775/sudo-as-different-user-and-running-screen
 # alias screen2='script -q -c screen /dev/null'
-
 function screen2() {
   /usr/bin/script -q -c "/usr/bin/screen ${*}" /dev/null
 }
@@ -169,7 +171,6 @@ mkcd() {
 }
 
 # cd n directory levels up using numerical argument
-# change name from cdup to up?
 up() {
     if [ -z "$1" ]; then
       cd ..
@@ -195,7 +196,6 @@ alias myip2='curl https://api.ipify.org/?format=json'
 alias myip3='curl https://ident.me'
 alias myip4="curl -s http://www.ip-adress.eu/ | grep My | sed 's/.*\">//' "
 
-# ping
 
 # ping gateway
 function pgw() {
