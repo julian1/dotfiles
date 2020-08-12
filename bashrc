@@ -157,10 +157,9 @@ function screen2() {
   /usr/bin/script -q -c "/usr/bin/screen ${*}" /dev/null
 }
 
-# tail files in a directory. note, this won't catch newly created files
+# tail all files in a directory. note, this won't catch newly created files
 # https://unix.stackexchange.com/questions/39729/monitor-files-%c3%a0-la-tail-f-in-an-entire-directory-even-new-ones
-# eg.
-# taildir /var/log/
+# eg. useful, taildir /var/log/
 function taildir() {
   tail -f -n 0  $( find "${*}" -type f )
 }
@@ -171,7 +170,7 @@ mkcd() {
     cd $1
 }
 
-# cd n directory levels up using numerical argument
+# cd n directory levels up with numerical argument
 up() {
     if [ -z "$1" ]; then
       cd ..
