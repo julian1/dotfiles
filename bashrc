@@ -102,7 +102,7 @@ alias hcmtime='TZ=Asia/Ho_Chi_Minh date'
 alias utctime='date --utc'
 
 
-function f() {
+function find2() {
   # subsume -iname '*$1*' argument
   # ie. support,
   # f
@@ -129,6 +129,7 @@ function f() {
   fi
 }
 
+alias f=find2
 
 
 # add numeric permissions. (eg 755) to ls
