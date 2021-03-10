@@ -191,20 +191,20 @@ endfunction
 " http://stackoverflow.com/questions/743150/how-to-prevent-vim-from-creating-and-leaving-temporary-files
 " note swp file is useful, for telling us when the file is already open in another vim session
 
-set backupdir=~/.vim/backup//
-set directory=~/.vim/swap//
-set undodir=~/.vim/undo//
+set backupdir=$HOME/.vim/backup//
+set directory=$HOME/.vim/swap//
+set undodir=$HOME/.vim/undo//
 
 " https://vi.stackexchange.com/questions/21708/how-do-i-disable-vim-from-producing-backup-files
 " create dirs if necessary
-if !isdirectory(&undodir)   | call mkdir(&undodir, "p") | endif
-if !isdirectory(&backupdir) | call mkdir(&backupdir, "p") | endif
-if !isdirectory(&directory) | call mkdir(&directory, "p") | endif
+"if !isdirectory(&undodir)   | call mkdir(&undodir, "p") | endif
+"if !isdirectory(&backupdir) | call mkdir(&backupdir, "p") | endif
+"if !isdirectory(&directory) | call mkdir(&directory, "p") | endif
 
 
 " autoload and bundle also
-if !isdirectory('~/.vim/autoload//')  | call mkdir('~/.vim/autoload//', "p") | endif
-if !isdirectory('~/.vim/bundle//')    | call mkdir('~/.vim/bundle//', "p") | endif
+"if !isdirectory('~/.vim/autoload//')  | call mkdir('~/.vim/autoload//', "p") | endif
+"if !isdirectory('~/.vim/bundle//')    | call mkdir('~/.vim/bundle//', "p") | endif
 
 
 
