@@ -14,7 +14,10 @@ echo "dir $dir"
 
 cp xmonad.hs "$dir/.xmonad"
 
-#mkdir "$dir/xmobar"
+#mkdir "$dir/xmobar" doesn't seem to be needed
 cp xmobarrc "$dir/.xmobarrc"
+
+# not tested
+cp Xresources "$dir/.Xresources"
 
 
