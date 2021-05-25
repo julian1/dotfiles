@@ -1,6 +1,4 @@
 
-
-# must be in local dir.
 if [ -z $1 ]; then
   exit "need dir arg"
 else
@@ -14,10 +12,8 @@ echo "dir $dir"
 
 cp xmonad.hs "$dir/.xmonad"
 
-#mkdir "$dir/xmobar" doesn't seem to be needed
 cp xmobarrc "$dir/.xmobarrc"
 
-# not tested
 cp Xresources "$dir/.Xresources"
 
 

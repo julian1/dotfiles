@@ -1,6 +1,5 @@
 
 
-# must be in local dir.
 if [ -z $1 ]; then
   exit "need dir arg"
 else
