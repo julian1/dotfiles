@@ -12,6 +12,9 @@ export EDITOR=vim
 # add local bin
 export PATH="$HOME/.local/bin:$PATH"
 
+# for nix...
+# export PATH="$HOME/.result/bin:$PATH"
+
 
 # for nix/nixos, reasonable default
 #export DISPLAY=:0
