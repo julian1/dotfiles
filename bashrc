@@ -106,6 +106,8 @@ alias autime='TZ=Australia/Hobart date'
 alias hcmtime='TZ=Asia/Ho_Chi_Minh date'
 alias utctime='date --utc'
 
+# suppress error output, 'permission denied'  etc
+alias find3="find $1 2>/dev/null"
 
 function find2() {
   # subsume -iname '*$1*' argument

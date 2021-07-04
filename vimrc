@@ -221,7 +221,11 @@ let hs_allow_hash_operator = 1
 " enable syntax highlyging
 syntax enable
 " set background=light
-color koehler
+" good for dark bg
+" colorscheme koehler
+
+" peachpuff
+colorscheme default
 
 
 " http://stackoverflow.com/questions/2600783/how-does-the-vim-write-with-sudo-trick-work
