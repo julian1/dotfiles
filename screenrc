@@ -6,3 +6,10 @@ startup_message off           # default: on
 # keep scrollback n lines
 defscrollback 2000 
 
+
+# disable password locking, accidental.
+# https://superuser.com/questions/343965/what-is-the-default-password-of-screen/831140
+bind x
+bind ^x
+
+
