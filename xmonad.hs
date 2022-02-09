@@ -19,9 +19,9 @@ import qualified XMonad.StackSet as W
 -- https://stackoverflow.com/questions/27742421/how-can-i-have-more-than-9-workspaces-in-xmonad
 -- https://hackage.haskell.org/package/xmonad-0.15/docs/doc-index-X.html
 
--- note. premapped modbar/xmonad keys   alt-p xmobar menu. and alt t is to cycle focus. and q is something
--- test with, cp ~/devel/dotfiles/xmonad.hs  /home/me/.xmonad/xmonad.hs  -i
--- then killall X. and restart
+-- note. premapped modbar/xmonad keys   alt-p xmobar launch menu. and alt-t is to cycle focus. and alt-q is restart xmonad, alt-tab cycle window.
+-- test by , cp ~/devel/dotfiles/xmonad.hs  /home/me/.xmonad/xmonad.hs  -i
+-- and then alt-q to restart
 
 myExtraWorkspaces = [ (xK_grave , "backtick"), (xK_0, "0"),(xK_minus, "-"),(xK_equal, "+"), (xK_BackSpace, "backspace") ] 
                   ++ [ (xK_backslash, "\\"), (xK_bracketright, "]"), (xK_bracketleft, "["), (0x6f , "o"), (0x69 , "i"), (0x75, "u"), (0x79, "y"), (0x72, "r"), (0x65, "e"), (0x77, "w") ]
