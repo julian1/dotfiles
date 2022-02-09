@@ -15,15 +15,21 @@ import XMonad.Hooks.SetWMName
 
 import qualified XMonad.StackSet as W
 
-
+-- use xev app to get keycodes
 -- https://stackoverflow.com/questions/27742421/how-can-i-have-more-than-9-workspaces-in-xmonad
 -- https://hackage.haskell.org/package/xmonad-0.15/docs/doc-index-X.html
 
-myExtraWorkspaces = [ (xK_grave , "backtick"), (xK_0, "0"),(xK_minus, "-"),(xK_equal, "+"), (xK_BackSpace, "backspace")]
+-- note. premapped modbar/xmonad keys   alt-p xmobar menu. and alt t is to cycle focus. and q is something
+-- test with, cp ~/devel/dotfiles/xmonad.hs  /home/me/.xmonad/xmonad.hs  -i
+-- then killall X. and restart
+
+myExtraWorkspaces = [ (xK_grave , "backtick"), (xK_0, "0"),(xK_minus, "-"),(xK_equal, "+"), (xK_BackSpace, "backspace") ] 
+                  ++ [ (xK_backslash, "\\"), (xK_bracketright, "]"), (xK_bracketleft, "["), (0x6f , "o"), (0x69 , "i"), (0x75, "u"), (0x79, "y"), (0x72, "r"), (0x65, "e"), (0x77, "w") ]
 
 
 -- myWorkspaces =  (map snd myExtraLeft ) ++  ["1","2","3","4","5","6","7","8","9"] ++ (map snd myExtraWorkspaces) -- doesn't work
-myWorkspaces =  ["1","2","3","4","5","6","7","8","9"] ++ (map snd myExtraWorkspaces)
+myWorkspaces =  ["1","2","3","4","5","6","7","8","9"]
+                ++ (map snd myExtraWorkspaces)
 
 
 
