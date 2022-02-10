@@ -52,10 +52,17 @@ EOF
 # xrandr --output eDP1 --brightness .45
 xrandr --output eDP-1 --brightness .55
 
-# start pulse audio
-pulseaudio --kill
-sleep 0.5
-pulseaudio --start
+# force restart, pulse audio
+#pulseaudio --kill
+#sleep 0.5
+#pulseaudio --start
+
+
+# share x session with other users.
+xhost + local:
+
+#
+echo 85 >  /sys/class/backlight/amdgpu_bl1/brightness
 
 
 # start xmonad
