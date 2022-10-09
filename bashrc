@@ -47,6 +47,7 @@ alias iftop='iftop -B -P -N'
 alias l=ls
 alias g=git
 alias s=sudo
+alias p=realpath
 
 # alias c=clear   use ctrl-L instead
 #alias f='find . -iname'
