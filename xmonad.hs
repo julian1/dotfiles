@@ -1,5 +1,7 @@
 -- deployed by ansible!
 
+-- {-# OPTIONS_GHC -Wno-deprecations #-}
+
 import XMonad
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
@@ -23,7 +25,7 @@ import qualified XMonad.StackSet as W
 -- test by , cp ~/devel/dotfiles/xmonad.hs  /home/me/.xmonad/xmonad.hs  -i
 -- and then alt-q to restart
 
-myExtraWorkspaces = [ (xK_grave , "backtick"), (xK_0, "0"),(xK_minus, "-"),(xK_equal, "+"), (xK_BackSpace, "backspace") ] 
+myExtraWorkspaces = [ (xK_grave , "backtick"), (xK_0, "0"),(xK_minus, "-"),(xK_equal, "+"), (xK_BackSpace, "backspace") ]
                   ++ [ (xK_backslash, "\\"), (xK_bracketright, "]"), (xK_bracketleft, "["), (0x6f , "o"), (0x69 , "i"), (0x75, "u"), (0x79, "y"), (0x72, "r"), (0x65, "e"), (0x77, "w") ]
 
 
@@ -53,31 +55,60 @@ mykeys = [
 myterminal = "xterm"
 
 
-myLogHook dest = dynamicLogWithPP defaultPP {
+-- THIS IS NEEDED for xmobar. 2023.
+-- myLogHook dest = dynamicLogWithPP defaultPP {
+myLogHook dest = dynamicLogWithPP def {
   ppOutput = hPutStrLn dest
   , ppVisible = wrap "(" ")"
 }
 
+
+
+{-
+https://stackoverflow.com/questions/72925858/xmonad-warning-and-error-for-dockseventhook-following-last-update
+https://wiki.archlinux.org/title/Xmonad
+
+main=do
+  xmonad $ docks def
+    { ...
+    , layoutHook=avoidStruts $ layoutHook def
+    , manageHook=manageHook def <+> manageDocks
+    , ...
+    }
+
+-}
+
 main = do
+
   -- xmproc <- spawnPipe "/usr/bin/xmobar /home/meteo/.xmobarrc"
   -- xmonad should read ~/.xmobarrc by default, to avoid specify ~/
   xmproc <- spawnPipe "xmobar"
-  xmonad $
-    defaultConfig {
 
+  xmonad $ docks
+    def {
+
+{-
         -- ells xmonad that you don't want your tiled windows to overlap xmobar.
         -- https://stackoverflow.com/questions/20446348/xmonad-toggle-fullscreen-xmobar#20448499
-        manageHook = manageDocks <+> manageHook defaultConfig
+      -- manageHook = manageDocks <+> manageHook def
+      manageHook = manageDocks <+> manageHook def
+      ,
 
-      , layoutHook = avoidStruts $ layoutHook defaultConfig
+      layoutHook = avoidStruts $ layoutHook def
 
       -- https://github.com/xmonad/xmonad/issues/15
       , handleEventHook = do
               -- ewmhDesktopsEventHook
               docksEventHook
               -- fullscreenEventHook,
+-}              -- docks
 
-      , workspaces = myWorkspaces
+    layoutHook=avoidStruts $ layoutHook def
+    , manageHook=manageHook def <+> manageDocks
+
+     , logHook = myLogHook xmproc
+
+     , workspaces = myWorkspaces
 
       -- green
       , focusedBorderColor =  "#009900"
@@ -85,7 +116,6 @@ main = do
       -- gray
       , normalBorderColor  =  "#666666"
 
-      , logHook = myLogHook xmproc
 
       , terminal = myterminal
 
