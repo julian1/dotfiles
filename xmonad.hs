@@ -59,44 +59,44 @@ myLogHook dest = dynamicLogWithPP defaultPP {
 }
 
 main = do
--- xmproc <- spawnPipe "/usr/bin/xmobar /home/meteo/.xmobarrc"
--- xmonad should read ~/.xmobarrc by default, to avoid specify ~/
-xmproc <- spawnPipe "xmobar"
-xmonad $
-  defaultConfig {
+  -- xmproc <- spawnPipe "/usr/bin/xmobar /home/meteo/.xmobarrc"
+  -- xmonad should read ~/.xmobarrc by default, to avoid specify ~/
+  xmproc <- spawnPipe "xmobar"
+  xmonad $
+    defaultConfig {
 
-      -- ells xmonad that you don't want your tiled windows to overlap xmobar.
-      -- https://stackoverflow.com/questions/20446348/xmonad-toggle-fullscreen-xmobar#20448499
-      manageHook = manageDocks <+> manageHook defaultConfig
+        -- ells xmonad that you don't want your tiled windows to overlap xmobar.
+        -- https://stackoverflow.com/questions/20446348/xmonad-toggle-fullscreen-xmobar#20448499
+        manageHook = manageDocks <+> manageHook defaultConfig
 
-    , layoutHook = avoidStruts $ layoutHook defaultConfig
+      , layoutHook = avoidStruts $ layoutHook defaultConfig
 
-    -- https://github.com/xmonad/xmonad/issues/15
-    , handleEventHook = do
-            -- ewmhDesktopsEventHook
-            docksEventHook
-            -- fullscreenEventHook,
+      -- https://github.com/xmonad/xmonad/issues/15
+      , handleEventHook = do
+              -- ewmhDesktopsEventHook
+              docksEventHook
+              -- fullscreenEventHook,
 
-    , workspaces = myWorkspaces
+      , workspaces = myWorkspaces
 
-    -- green
-    , focusedBorderColor =  "#009900"
+      -- green
+      , focusedBorderColor =  "#009900"
 
-    -- gray
-    , normalBorderColor  =  "#666666"
+      -- gray
+      , normalBorderColor  =  "#666666"
 
-		, logHook = myLogHook xmproc
+      , logHook = myLogHook xmproc
 
-		, terminal = myterminal
+      , terminal = myterminal
 
 
-    -- intellij
-    , startupHook = setWMName "LG3D"
+      -- intellij
+      , startupHook = setWMName "LG3D"
 
-		-- , startupHook = spawnOnce "/usr/bin/xmobar /home/meteo/.xmobarrc"
+      -- , startupHook = spawnOnce "/usr/bin/xmobar /home/meteo/.xmobarrc"
 
-  }
-		`additionalKeys`
-        mykeys
+    }
+      `additionalKeys`
+          mykeys
 
 
