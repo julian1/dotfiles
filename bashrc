@@ -44,10 +44,11 @@ alias feh='feh -F -d --draw-exif'
 alias iftop='iftop -B -P -N'
 
 # shortcuts
-alias l=ls
 alias g=git
-alias s=sudo
+alias f=find
 alias p=realpath
+alias l=ls
+alias s=sudo
 
 # alias c=clear   use ctrl-L instead
 #alias f='find . -iname'
@@ -61,7 +62,6 @@ alias p=realpath
 # alias p=ping
 # alias a=apt-get         # ansible
 # alias c=cat             # cd or cat? config_stufff
-# alias f=find
 # alias h=history
 # alias ps='ps auxf'
 # alias sv='sudo vim -p'
@@ -137,7 +137,6 @@ function find2() {
   fi
 }
 
-alias f=find2
 
 
 # add numeric permissions. (eg 755) to ls
