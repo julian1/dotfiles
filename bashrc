@@ -44,6 +44,7 @@ alias feh='feh -F -d --draw-exif'
 alias iftop='iftop -B -P -N'
 
 # shortcuts
+alias c=cd
 alias g=git
 alias f=find
 alias p=realpath
