@@ -238,6 +238,14 @@ cmap wx w !sudo tee  %
 set ruler
 
 
+
+" verilog no longer auto detected? jan 2024
+autocmd BufNewFile,BufRead *.v set filetype=verilog
+
+" au BufReadPost *.v set syntax=verilog
+
+
+
 " *************** PATHOGEN *******
 
 " execute pathogen#infect()
