@@ -56,6 +56,9 @@ mykeys = [
 -- myterminal = "xterm  -fg white -bg black"
 myterminal = "xterm"
 
+-- 2024.  fontsize doesn't seem to be respected in Xresources
+myterminal = "xterm -fa 'DejaVu Sans Mono' -fs 12"
+
 
 -- THIS IS NEEDED for xmobar. 2023.
 -- myLogHook dest = dynamicLogWithPP defaultPP {
