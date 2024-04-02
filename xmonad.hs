@@ -54,7 +54,7 @@ mykeys = [
 -- font and font size will inherit from .xinitrc,
 -- but should be XTerm*faceName: DejaVu Sans Mono, XTerm*faceSize: 11   ! laptop
 -- myterminal = "xterm  -fg white -bg black"
-myterminal = "xterm"
+-- myterminal = "xterm"
 
 -- 2024.  fontsize doesn't seem to be respected in Xresources
 myterminal = "xterm -fa 'DejaVu Sans Mono' -fs 12"
