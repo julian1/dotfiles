@@ -91,6 +91,8 @@ alias mkpass="cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 18 | head -n 1"
 alias pr='a2ps -1 -R -f 9'
 
 # record screen video
+# 2024. gpu-screen-recorder ok, albeit needs root.
+# gpu-screen-recorder -w screen -f 60  -o video.mp4
 alias rec="ffmpeg  -f x11grab -s 1920x1200 -r 25 -i :0.0 output.mp4"
 alias rec2="ffmpeg -f x11grab -s 1920x1080 -r 25 -i :0.0 output.mp4"
 
