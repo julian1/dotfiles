@@ -128,6 +128,7 @@ nmap <C-Y> mz:execute SaveSession()<CR>
 :imap <C-w>     <ESC>:q<cr>i
 
 
+
 " tab key cycles buffers. eg. useful to cycle buffers in a tab
 " nnoremap  <silent>   <tab>  :bnext<CR>
 " nnoremap  <silent> <s-tab>  :bprevious<CR>
@@ -256,5 +257,18 @@ if exists('g:loaded_pathogen')
     call pathogen#infect()  "load the bundles, if possible
     Helptags                "plus any bundled help
 endif
+
+
+" jun 2024. suppress keyword completion - in insert mode
+" https://stackoverflow.com/questions/63275538/how-to-disable-vim-built-in-keyword-autocompletion
+" none of these work
+" :set complete=
+" inoremap <c-p> <nop>
+" inoremap <c-n> <nop>
+" But ctrl-e with clear the pop-up menu, and go back to regular text insert mode.
+
+
+
+
 
 
