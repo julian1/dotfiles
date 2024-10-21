@@ -23,7 +23,12 @@ export PATH="$HOME/.local/bin:$PATH"
 # alias/functions
 
 
+
+
 alias ls='ls --group-directories-first --color=always' # or less, or locate?
+
+alias evince2='dbus-launch --exit-with-session evince'
+
 
 # ps except deselect kernel kthreadd
 # use ps2 f for tree listing without kernel processes
