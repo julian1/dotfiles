@@ -2,10 +2,6 @@
 # http://unix.stackexchange.com/questions/30925/in-bash-when-to-alias-when-to-script-and-when-to-write-a-function
 
 # https://unix.stackexchange.com/questions/258679/why-is-ls-suddenly-wrapping-items-with-spaces-in-single-quotes
-
-# inputrc
-set bell-style none
-
 export QUOTING_STYLE=literal
 
 export HISTFILESIZE=40000
