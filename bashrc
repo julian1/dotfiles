@@ -38,7 +38,9 @@ alias ps2='ps --ppid 2 -p 2 --deselect'
 alias xclip='xclip -selection clipboard'
 
 alias dmesg='dmesg -T --color=always'
-alias less='less -R'
+
+# disable march 2025
+# alias less='less -R'
 alias vim='vim -p'
 alias vims='vim -p -S ./mysession.vim'
 
