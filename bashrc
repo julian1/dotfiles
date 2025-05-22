@@ -53,7 +53,6 @@ alias iftop='iftop -B -P -N'
 # shortcuts
 alias c=cd
 alias g=git
-alias f=find
 alias p=realpath
 alias l=ls
 alias s=sudo
@@ -120,7 +119,13 @@ alias utctime='date --utc'
 # suppress error output, 'permission denied'  etc
 alias find3="find $1 2>/dev/null"
 
-function find2() {
+
+
+
+# trying to alias this function doesn't work.
+#alias f='find2'
+
+function f() {
   # subsume -iname '*$1*' argument
   # ie. support,
   # f
