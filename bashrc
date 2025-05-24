@@ -254,7 +254,8 @@ get_prompt_color() {
   if [ `id -u` -eq 0 ]; then
     echo "$RED"
   else
-    echo "$GREEN"
+    # echo "$GREEN"
+    echo "$BLUE"
   fi
 }
 
