@@ -51,11 +51,11 @@ alias feh='feh -F -d --draw-exif'
 alias iftop='iftop -B -P -N'
 
 # shortcuts
-alias c=cd
 alias g=git
 alias p=realpath
+alias v='vim -p'
+alias e=evince
 alias l=ls
-alias s=sudo
 
 # alias c=clear   use ctrl-L instead
 #alias f='find . -iname'
@@ -76,6 +76,8 @@ alias s=sudo
 # alias ss='sudo -s'
 # alias se='sudo -sE'
 # alias sc='systemctl'
+# alias c=cd
+# alias s=sudo
 
 alias sc=systemctl    # shadows /usr/bin/sc
 alias jc=journalctl
@@ -99,8 +101,12 @@ alias pr='a2ps -1 -R -f 9'
 # record screen video
 # 2024. gpu-screen-recorder ok, albeit needs root.
 # gpu-screen-recorder -w screen -f 60  -o video.mp4
-alias rec="ffmpeg  -f x11grab -s 1920x1200 -r 25 -i :0.0 output.mp4"
-alias rec2="ffmpeg -f x11grab -s 1920x1080 -r 25 -i :0.0 output.mp4"
+# alias rec="ffmpeg  -f x11grab -s 1920x1200 -r 25 -i :0.0 output.mp4"
+# alias rec2="ffmpeg -f x11grab -s 1920x1080 -r 25 -i :0.0 output.mp4"
+
+# may 2025. both gpu-screen-recorder and ffmpeg work.
+alias rec="ffmpeg -f x11grab  -r 25 -i :0.0 output.mp4"
+alias rec2="gpu-screen-recorder -w screen -f 24  -o video.mp4"
 
 # screen capture, emits a png in folder
 alias cap="scrot -d 5"
