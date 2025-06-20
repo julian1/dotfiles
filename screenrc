@@ -13,3 +13,9 @@ bind x
 bind ^x
 
 
+# issue with less using italics
+# https://unix.stackexchange.com/questions/179174/make-less-highlight-search-patterns-instead-of-italicizing-them
+# to my ~/.screenrc and it does set the TERM to "screen-256color"
+# The difference for me is that TERM is being set to "screen" when in tmux, but "xterm-256color" when not.
+term xterm-256color
+
