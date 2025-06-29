@@ -37,7 +37,10 @@ myWorkspaces =  ["1","2","3","4","5","6","7","8","9"]
 
 mykeys = [
           -- ((mod1Mask ,  xK_z), spawn "xtrlock -b")
-          ((mod1Mask ,  xK_z), spawn "sleep 0.2; xtrlock"),
+          -- ((mod1Mask ,  xK_z), spawn "sleep 0.2; xtrlock"),
+
+          ((mod1Mask ,  xK_z), spawn "slock"),
+
           ((mod1Mask ,  xK_a), spawn "sleep 0.2; scrot -s ~/output.png")
 
           ] ++ [ ((mod1Mask, key), (windows $ W.greedyView ws)) | (key,ws) <- myExtraWorkspaces  ]
