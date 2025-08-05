@@ -94,6 +94,7 @@ alias path='for i in $( echo "$PATH" | sed "s/\:/ /g" ); do echo $i; done'
 
 # generate a password
 alias mkpass="cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 18 | head -n 1"
+alias mkuid="cat /dev/urandom | tr -dc '0-9' | fold -w 10 | head -n 1"
 
 # print text doc
 alias pr='a2ps -1 -R -f 9'
