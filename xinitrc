@@ -8,6 +8,11 @@ xset s noblank      # don't blank the video device
 # https://livingthelinuxlifestyle.wordpress.com/2019/08/19/disable-screen-blanking-in-linux/
 xset dpms 0 0 0
 
+# use this command to check status of screen blanking
+# see both sections
+# may need to reboot
+# xset q
+
 
 xset r rate   200   # keyboard repeat rate fixes firefox scrolling
                     # 150 is too short. causes repeat in xterm terminal.
