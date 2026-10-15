@@ -86,6 +86,27 @@ main=do
 
 -}
 
+
+{-
+myStartupHook :: X :: ()
+myStartupHook = do
+    --  have a script here... eg. x.sh to set stuff...
+    -- spawnOnce "~/x.sh"
+
+    spawnOnce "xset s off"
+    spawnOnce "xset -dpms"
+    spawnOnce "xset s noblank"
+
+
+myStartupHook :: X ()
+myStartupHook = do
+    spawnOnce "feh --bg-fill /path/to/your/wallpaper.jpg"
+    spawnOnce "picom &"
+    spawnOnce "trayer --edge top --align right --widthtype request --padding 6 --transparent true --alpha 0 --tint-color 0x282c34 --height 22"
+
+
+-}
+
 main = do
 
   -- xmproc <- spawnPipe "/usr/bin/xmobar /home/meteo/.xmobarrc"
