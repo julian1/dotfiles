@@ -32,6 +32,8 @@ xset r rate 200
 
 # consider heredoc
 # xrdb -merge <<EOF
+# XTerm*VT100*selectToClipboard: true
+# XTerm*selectToClipboard: true
 # XTerm*foreground: #ffffff
 # EOF
 
