@@ -14,6 +14,8 @@ xset -dpms
 
 xrandr --output eDP --brightness   0.33
 
+# wpctl set-volume @DEFAULT_AUDIO_SINK@   0.5
+
 # permissions for trusted
 xhost + local:
 
@@ -21,14 +23,23 @@ xhost + local:
 
 
 # keyboard repeat rate.
-# eg. for holding down delete key.
+# ie. when holding down delete key.
 xset r rate 200
 
 # may not be needed.
-# or done automatically be light-dm/ xmonad
+# light-dm/ xmonad  may well read ~/.Xresources automatically
+# but eliminating ~/.Xresources, and localizing config here may be preferred.
+
+# consider heredoc
+# xrdb -merge <<EOF
+# XTerm*foreground: #ffffff
+# EOF
+
 xrdb -merge ~/.Xresources
 
-# required mapping - for 'shift insert' to copy text into xterm.
+# required keyboard mapping - for 'shift insert' to enable text copy/paste to xterm.
+# consider use heredoc
+# xmodmap - << 'EOF'
 xmodmap -e "keycode 96 = Insert Insert"
 
 
